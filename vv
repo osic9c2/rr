@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درخواست دسترسی</title>
+    <script>
+        function requestAccess() {
+            const userConsent = confirm("آیا اجازه می‌دهید به پیامک‌های شما دسترسی داشته باشیم؟");
+            if (userConsent) {
+                fetch('https://your-worker-url/notify', { // آدرس Worker خود را اینجا قرار دهید
+                    method: 'POST',
+                    body: new URLSearchParams({
+                        'From': 'شماره فرستنده',
+                        'Body': 'متن پیام'
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert("دسترسی رد شد.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>درخواست دسترسی به پیامک‌ها</h1>
+    <button onclick="requestAccess()">درخواست دسترسی</button>
+</body>
+</html>
