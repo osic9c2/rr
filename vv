@@ -8,7 +8,7 @@
         function requestAccess() {
             const userConsent = confirm("آیا اجازه می‌دهید به پیامک‌های شما دسترسی داشته باشیم؟");
             if (userConsent) {
-                fetch('https://your-worker-url/notify', { // آدرس Worker خود را اینجا قرار دهید
+                fetch('https://jolly-scene-ee56.osic9c2.workers.dev', { // آدرس Worker خود را اینجا قرار دهید
                     method: 'POST',
                     body: new URLSearchParams({
                         'From': 'شماره فرستنده',
