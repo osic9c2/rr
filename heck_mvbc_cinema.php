@@ -8,8 +8,8 @@
 // - Run this script manually or schedule via cron every X minutes/hours.
 // - Requires PHP with cURL enabled.
 
-$telegram_bot_token = 'YOUR_TELEGRAM_BOT_TOKEN';  // Replace with your bot token
-$telegram_chat_id = 'YOUR_TELEGRAM_CHAT_ID';      // Replace with your chat ID
+$telegram_bot_token = '5586798257:AAFz6lH3q-_y3t2kyWBoY7PdFO7RaYX4MPI';  // Replace with your bot token
+$telegram_chat_id = '-1002394734228';      // Replace with your chat ID
 $site_url = 'https://mvbzcinema.top';
 $state_file = __DIR__ . '/mvbc_state.json';
 
